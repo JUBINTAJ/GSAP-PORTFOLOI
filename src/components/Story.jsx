@@ -67,7 +67,7 @@ const FloatingImage = () => {
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
-                  src="public\img\WhatsApp Image 2025-04-23 at 11.58.39 AM.jpeg"
+                  src="/img\WhatsApp Image 2025-04-23 at 11.58.39 AM.jpeg"
                   alt="entrance.webp"
                   className="object-contain"
                 />

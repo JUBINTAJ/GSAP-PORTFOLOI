@@ -95,7 +95,7 @@ const Features = () => (
             rel="noopener noreferrer"
           >
             <BentoCard
-              src="public\img\WhatsApp Image 2025-04-23 at 2.55.30 PM.jpeg"
+              src="/img\WhatsApp Image 2025-04-23 at 2.55.30 PM.jpeg"
               title={
                 <>
                   re<b>f</b>rbishable electronics
@@ -114,7 +114,7 @@ const Features = () => (
             rel="noopener noreferrer"
           >
             <BentoCard
-              src="public\img\WhatsApp Image 2025-04-23 at 2.42.19 PM.jpeg"
+              src="/img\WhatsApp Image 2025-04-23 at 2.42.19 PM.jpeg"
               title={
                 <>
                   <b>e</b>-commerse
@@ -132,7 +132,7 @@ const Features = () => (
             rel="noopener noreferrer"
           >
             <BentoCard
-              src="public\img\WhatsApp Image 2025-04-23 at 5.21.49 PM.jpeg"
+              src="/img\WhatsApp Image 2025-04-23 at 5.21.49 PM.jpeg"
               title={
                 <>
                   Thr<b>e</b>ad
@@ -151,7 +151,7 @@ const Features = () => (
             rel="noopener noreferrer"
           >
             <BentoCard
-              src="public\img\WhatsApp Image 2025-05-10 at 3.55.39 PM.jpeg"
+              src="/img\WhatsApp Image 2025-05-10 at 3.55.39 PM.jpeg"
               title={
                 <>
                   Cu<b>b</b>e

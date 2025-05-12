@@ -31,7 +31,7 @@ const Contact = () => {
 
     <div className="absolute -top-40 left-10 w-52 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
       <ImageClipBox
-        src="public/img/WhatsApp Image 2025-04-23 at 11.26.54 AM.jpeg"
+        src="/img/WhatsApp Image 2025-04-23 at 11.26.54 AM.jpeg"
         clipClass="sword-man-clip-path md:scale-125"
       />
     </div>
