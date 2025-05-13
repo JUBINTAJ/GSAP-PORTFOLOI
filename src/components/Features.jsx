@@ -1,9 +1,17 @@
-import { useState, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState, useRef, useEffect } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
   const itemRef = useRef(null);
+
+
 
   const handleMouseMove = (event) => {
     if (!itemRef.current) return;
@@ -59,7 +67,44 @@ export const BentoCard = ({ src, title, description }) => {
   );
 };
 
-const Features = () => (
+const Features = () => {
+
+
+  const textRef = useRef(null);
+  const containerRef = useRef(null);
+useEffect(() => {
+    if (!textRef.current || !containerRef.current) return;
+
+    const textHeight = textRef.current.offsetHeight;
+    const containerHeight = containerRef.current.offsetHeight;
+
+    const yStart = containerHeight - textHeight;
+    const yEnd = 0;
+
+    const animation = gsap.fromTo(
+      textRef.current,
+      { y: yEnd}, 
+      {
+        y:  yStart, 
+        ease: 'none', 
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 40%', 
+          end: `+=${containerHeight}`,
+          scrub: true, 
+        },
+      }
+    );
+
+    return () => {
+      animation.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+
+  return (
+
   <section className="bg-black pb-52">
     <div className="container  mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
@@ -79,13 +124,20 @@ const Features = () => (
           {/* In addition to coursework, I actively participate in tech communities and coding competitions to continuously improve and stay updated with the latest trends in software development. */}
         </p>
       </div>
+<div
+      ref={containerRef}
+      className="relative mb-7 h-96 w-full overflow-hidden rounded-md border border-violet-400 bg-black md:h-[65vh]"
+    >
+      <div
+        ref={textRef}
+        className="absolute w-full text-center text-sm text-violet-400 special-font hero-heading"
+      >
+        HTML · CSS · JavaScript · React · Redux · Next.js · TypeScript · GSAP · Tailwind · MUI · Zustand · React Query · MongoDB · Node.js · Express · PWA · Figma · Git-GitHub · Axios · Bootstrap · Jwt · RestApi · Multer · Postman
+      </div>
+    </div>
 
-      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh] ">
 
 
-
-
-      </BentoTilt>
 
 <div className="grid w-full grid-cols-1 h-screen md:grid-cols-2 gap-5 sm:gap-6 md:gap-7 px-4 sm:px-8 py-8 auto-rows-fr">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-0  ">
@@ -166,5 +218,6 @@ const Features = () => (
     </div>
   </section>
 );
+}
 
 export default Features;
