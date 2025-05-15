@@ -161,7 +161,7 @@ useEffect(() => {
 
         <BentoTilt className="bento-tilt_1 row-span-1  md:col-span-1 md:ms-0">
           <a
-            href="https://github.com/JUBINTAJ/BABY_FULL_STACK_E-commerse"
+            href="https://baby-full.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
