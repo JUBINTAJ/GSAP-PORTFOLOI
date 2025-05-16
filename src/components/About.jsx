@@ -25,6 +25,7 @@ const About = () => {
       borderRadius: 0,
     });
   });
+  console.log("helleo")
 
   return (
     <div id="about" className="min-h-screen w-screen">

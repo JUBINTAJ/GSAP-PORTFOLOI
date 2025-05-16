@@ -142,7 +142,8 @@ useEffect(() => {
 <div className="grid w-full grid-cols-1 h-screen md:grid-cols-2 gap-5 sm:gap-6 md:gap-7 px-4 sm:px-8 py-8 auto-rows-fr">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-0  ">
           <a
-            href="https://github.com/JUBINTAJ/thread-clone"
+                      href="https://github.com/JUBINTAJ/QyrenxFrontend"
+
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -179,7 +180,7 @@ useEffect(() => {
 
         <BentoTilt className="bento-tilt_1  md:col-span-1 md:me-0">
           <a
-            href="https://github.com/JUBINTAJ/QyrenxFrontend"
+            href="https://github.com/JUBINTAJ/thread-clone"
             target="_blank"
             rel="noopener noreferrer"
           >
